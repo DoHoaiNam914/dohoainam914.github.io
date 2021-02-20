@@ -4,7 +4,6 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<script src="js/jparticles.js"></script>
 	<script src="js/particles.js"></script>
-	<script src="js/snow.js"></script>
 	<script src="js/index.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -82,10 +81,9 @@
 	</style>
 </head>
 <body>
-	<div id="snows" style="position: fixed; width: 100%; height: 100%;"></div>
 	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
 	<span class="center">
-		<img class="avatar" src="img/avatar.jpg">
+		<img class="avatar" src="img/avatar.png">
 		<div class="bg-music-button" style="color: #ffffff;">
 			<audio class="music" autoplay loop>
 				<source src="EGOIST - 最後の花弁 (The meaning of love).mp3" type="audio/mpeg">
@@ -100,7 +98,6 @@
 		<a href="https://github.com/DoHoainam914" class="fab fa-github" style="color: #ffffff;"></a>
 	</span>
 	<script>
-		new JParticles.snow("#snows");
 		new JParticles.particle("#particles", {
 			color: ["#ffffff", "#6f6f6f"],
 			range: 150,

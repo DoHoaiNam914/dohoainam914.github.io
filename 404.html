@@ -2,7 +2,6 @@
 	<title>Page not found - WEBSITE</title>
 	<script src="jparticles.js"></script>
 	<script src="particles.js"></script>
-	<script src="snow.js"></script>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Varta:wght@300&display=swap');
 		html {
@@ -38,13 +37,11 @@
 	<meta http-equiv="refresh" content="5;index.html">
 </head>
 <body>
-	<div id="snows" style="position: fixed; width: 100%; height: 100%;"></div>
 	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
 	<span class="message">
       <div>404 - Page not found.</div>
    </span>
 	<script>
-		new JParticles.snow("#snows");
 		new JParticles.particle("#particles", {
 			color: ["#ffffff", "#6f6f6f"],
 			range: 150,
