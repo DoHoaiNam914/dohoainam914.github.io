@@ -1,93 +1,102 @@
-<head>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-	<title>WEBSITE</title>
-	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-	<script src="js/jparticles.js"></script>
-	<script src="js/particles.js"></script>
-	<script src="js/index.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".fa-pause-circle").on("click", function() {
-				$(this).hide();
-				$(".fa-play-circle").fadeIn();
-				$(".music")[0].pause();
-			});
-			$(".fa-play-circle").on("click", function() {
-				$(this).hide();
-				$(".fa-pause-circle").fadeIn();
-				$(".music")[0].play();
-			});
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Đỗ Hoài Nam's Website - Trang chủ</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript" data-body="false">
+	if (navigator.userAgent.match(/(Android|BlackBerry|BrowserNG|Fennec|IEMobile|ios|iPad|iPhone|iPod|JUC|Mobile|MQQBrowser|pad|phone|pod|Symbian|WebOS|Windows Phone|wOSBrowser)/i)) {
+		if (location.pathname.indexOf('/m/') == -1 && location.pathname !== '/m') {
+			location.href = location.protocol + '//' + location.host + location.pathname.replace('/', '/m/') + location.search;
+		}
+	} else {
+		if (location.pathname.indexOf('/m/') > -1) {
+			location.href = location.protocol + '//' + location.host + location.pathname.replace('/m/', '/') + location.search;
+		} else if(location.pathname === '/m' ) {
+			location.href = location.protocol + '//' + location.host + location.pathname.replace('/m', '/') + location.search;
+		}
+	}
+</script>
+<script src="js/jparticles.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fa-pause-circle").on("click", function() {
+			$(this).hide();
+			$(".fa-play-circle").fadeIn();
+			$(".audio")[0].pause();
 		});
-	</script>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Varta:wght@300&display=swap');
-		html {
-			background-image: url("img/background.jpg");
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-			font-family: Oxygen;
-			color: #ffffff;
-		}
-		.center {
-			transform: translate(-50%, -50%);
-			background-color: #0000006f;
-			text-align: center;
-			position: absolute;
-			border-radius: 5%;
-			padding: 20px;
-			left: 50%;
-			top: 50%;
-		}
-		.avatar {
-			border-radius: 10%;
-			height: 150px;
-			width: 150px;
-		}
-		.bg-music-button {
-			transform: translate(-50%, -50%);
-			position: absolute;
-			font-size: 24px;
-			left:50%;
-			top:50%;
-		}
-		.fa-play-circle {
-			display: none;
-		}
-		.center hr {
-			width: 50%;
-		}
-		.center a:link {
-			transition: 0.1s ease-in;
-			text-decoration: none;
-		}
-		.center a:hover {
-			text-shadow: 0px 0px 5px;
-		}
-		.copyright {
-			transform: translate(-50%, -50%);
-			position: absolute;
-			text-align: center;
-			left: 50%;
-			top: 90%;
-		}
-		div {
-			cursor: default;
-		}
-		div:hover {
-			text-shadow: 0px 0px 5px;
-			color: #ffffff;
-		}
-	</style>
-</head>
+		$(".fa-play-circle").on("click", function() {
+			$(this).hide();
+			$(".fa-pause-circle").fadeIn();
+			$(".audio")[0].play();
+		});
+	});
+</script>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Varta:wght@300&display=swap');
+	html {
+		background-image: url("img/background.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		font-family: Oxygen;
+		color: #ffffff;
+	}
+	.center {
+		transform: translate(-50%, -50%);
+		background-color: #0000006f;
+		text-align: center;
+		position: absolute;
+		border-radius: 5%;
+		padding: 20px;
+		left: 50%;
+		top: 50%;
+	}
+	.avatar {
+		border-radius: 10%;
+		height: 150px;
+		width: 150px;
+	}
+	.audio-controller {
+		position: fixed;
+		font-size: 30px;
+		color: #ffffff;
+		left:50%;
+		top:50%;
+	}
+	.fa-play-circle {
+		display: none;
+	}
+	hr {
+		width: 50%;
+	}
+	.center a:link {
+		transition: 0.1s ease-in;
+		text-decoration: none;
+	}
+	.center a:hover {
+		text-shadow: 0px 0px 5px;
+	}
+	.copyright {
+		transform: translate(-50%, -50%);
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		top: 90%;
+	}
+	div:hover {
+		text-shadow: 0px 0px 5px;
+		color: #ffffff;
+	}
+</style>
 <body>
 	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
 	<span class="center">
-		<img class="avatar" src="img/avatar.png">
-		<div class="bg-music-button" style="color: #ffffff;">
-			<audio class="music" autoplay loop>
-				<source src="EGOIST - 最後の花弁 (The meaning of love).mp3" type="audio/mpeg">
-			</audio>
+		<img class="avatar" src="img/avatar.jpg">
+		<div class="audio-controller" style="transform: translate(-50%, -50%);">
+			<audio class="audio" autoplay loop src="EGOIST - 最後の花弁 (The meaning of love).mp3" style="position: absolute; top: -1000px;"></audio>
 			<i class="far fa-play-circle"></i>
 			<i class="far fa-pause-circle"></i>
 		</div>
@@ -99,7 +108,7 @@
 	</span>
 	<script>
 		new JParticles.particle("#particles", {
-			color: ["#ffffff", "#6f6f6f"],
+			color: "#ffffff",
 			range: 150,
 			proximity: 80,
 			parallax: true

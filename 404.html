@@ -1,49 +1,62 @@
-<head>
-	<title>Page not found - WEBSITE</title>
-	<script src="jparticles.js"></script>
-	<script src="particles.js"></script>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Varta:wght@300&display=swap');
-		html {
-			color: #ffffff;
-			background-image: url("img/background.jpg");
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			font-family: Oxygen;
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Đỗ Hoài Nam's Website - Trang không tồn tại</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript" data-body="false">
+	if (navigator.userAgent.match(/(Android|BlackBerry|BrowserNG|Fennec|IEMobile|ios|iPad|iPhone|iPod|JUC|Mobile|MQQBrowser|pad|phone|pod|Symbian|WebOS|Windows Phone|wOSBrowser)/i)) {
+		if (location.pathname.indexOf('/m/') == -1 && location.pathname !== '/m') {
+			location.href = location.protocol + '//' + location.host + location.pathname.replace('/', '/m/') + location.search;
 		}
-		.message {
-			position: fixed;
-			left: 50%;
-			top: 30%;
-			margin-left: -100px;
-			text-align: center;
+	} else {
+		if (location.pathname.indexOf('/m/') > -1) {
+			location.href = location.protocol + '//' + location.host + location.pathname.replace('/m/', '/') + location.search;
+		} else if(location.pathname === '/m' ) {
+			location.href = location.protocol + '//' + location.host + location.pathname.replace('/m', '/') + location.search;
 		}
-		.copyright {
-			position: absolute;
-			left: 50%;
-			top: 96%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-		}
-		div {
-			cursor: default;
-		}
-		div:hover {
-			color: #ffd700;
-			text-shadow: 0px 0px 5px;
-		}
-	</style>
-	<meta http-equiv="refresh" content="5;index.html">
-</head>
+	}
+</script>
+<script src="js/jparticles.js"></script>
+<script src="js/particles.js"></script>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Varta:wght@300&display=swap');
+	html {
+		background-image: url("img/background.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		font-family: Oxygen;
+		color: #ffffff;
+	}
+	.message {
+		margin-left: -100px;
+		text-align: center;
+		position: fixed;
+		left: 50%;
+		top: 30%;
+	}
+	.copyright {
+		transform: translate(-50%, -50%);
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		top: 90%;
+	}
+	div:hover {
+		text-shadow: 0px 0px 5px;
+		color: #ffffff;
+	}
+</style>
+<meta http-equiv="refresh" content="5;index.html">
 <body>
 	<div id="particles" style="position: fixed; width: 100%; height: 100%;"></div>
 	<span class="message">
-      <div>404 - Page not found.</div>
+      <div>404 - Trang khÔng tồn tại.</div>
    </span>
 	<script>
 		new JParticles.particle("#particles", {
-			color: ["#ffffff", "#6f6f6f"],
+			color: "#ffffff",
 			range: 150,
 			proximity: 80,
 			parallax: true
